@@ -7,8 +7,9 @@ let categorySchema = new mongoose.Schema({
   },
     description: {
         type: String,
-        unique: true,
-        required: true
     },
     isDeleted: { type: Boolean, default: false }
 });
+
+module.exports = mongoose.model('category',categorySchema)
+
